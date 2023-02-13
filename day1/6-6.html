@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>지역변수와 전역변수</title>
+</head>
+<body>
+    <h3>지역변수와 전역변수</h3>
+    <hr>
+    <script>
+        var x =100; //전역변수 
+        function f(){
+            var y;
+            var x=10; //지역변수 x 새로 생성 
+            y=20; //지역변수 y에 20 저장
+            z=30; //새로운 전역변수 z가 선언되고 30 저장
+            if(y==20){
+                let b =40; //if블록에서만 사용되는 블록변수 b 선언
+                b++;
+                document.write("if블록내 블록변수 b = "+b+" <br>"); 
+
+            }
+            //이곳에는 블록변수 b 접근할 수 없음 
+            document.write("함수 f() 내 지역변수 y =" +y+"<br> ");
+            document.write("함수 f() 내 전역변수 this.x =" +globalThis.x+"<br> ");
+        }
+
+        f();
+        document.write("전역변수 x =" + x + "<br>");
+        document.write("전역변수 z = " +z+"<br>");
+    </script>
+</body>
+</html>
+
+

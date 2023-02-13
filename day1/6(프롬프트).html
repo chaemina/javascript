@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>자바스크립트 다이얼로그</title>
+<body>
+    <h3>프롬프트 prompt ("메세지", "입력값")</h3>
+    <hr>
+    <script>
+        var ret = prompt("이름을 입력하세요", "이름을 입력하세요");
+        if(ret == null){
+            document.writeln("취소버튼");
+        }
+        else if(ret == ""){
+            document.writeln("빈 문자열");
+        }
+        else {
+            document.writeln(ret);
+        }
+    </script>
+</body>
+</html>
