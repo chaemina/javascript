@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>구구단 출력 함수 만들기</title>
+
+    <script>
+        function gugudan(n){
+           
+            if(isNaN(n) || n<1|| n>9){ //m이 숫자가 아니거나, 1보다 작거나 9보다 큰경우
+                alert("잘못입력하셨습니다");
+                return;
+
+            }
+            for(var i=1; i<=9; i++){
+                document.write(n+"x"+i+"="+n*i+"<br>");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <script>
+        var n = prompt("구구단 몇단을 원하세요", "");
+        gugudan(n);
+    </script>
+</body>
+</html>

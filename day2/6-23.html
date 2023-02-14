@@ -1,0 +1,36 @@
+<!--1. 전역 함수 
+eval() 함수 
+수식이나 자바스크립트 문장을 문자열 형태로 전달받아 실행 후 리턴 
+
+parseInt() 함수 
+문자열을 숫자로 변환하여 리턴
+
+isNaN() 함수와 parseInt() 함수 
+false가 거짓값을 나타내는 상수 키워드인것 같이 NaN은 숫자가 아님을 나타내는 상수 키워드 
+isNaN()은 매개변수 값이 NaN인지 비교하여 리턴-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>전역함수</title>
+</head>
+<body>
+    <script>
+        let res =eval("(2+3)*(4+2)");
+        document.write("eval((2+3)*(4+2))는" +res+"<br><br>");
+
+        let m =parseInt("32");
+        document.write("parseInt(32)는" +m+"<br><br>");
+
+        let n =parseInt("0x32");
+        document.write("parseInt(0x32)는" +n+"<br><br>");
+
+        n= parseInt("hello");
+        if(isNaN(n)){
+            document.write("숫자가 아닙니다.")
+        }
+
+        eval(), parseInt(), isNaN();
+    </script>
+</body>
+</html>
