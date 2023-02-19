@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array 객체로 배열 만들기</title>
+</head>
+<body>
+    <h3>Array 객체로 배열 만들기</h3>
+    <hr>
+    <script>
+        var degrees = new Array(); //빈 배열 생성
+        degrees[0] =15.1;
+        degrees[1] =19.1;
+        degrees[2] =17.1;
+        degrees[3] =16.1;
+
+        var sum =0;
+        for(i=0; i<degrees.length; i++){ //배열 크기만큼 루프
+            sum += degrees[i]; //배열 원소 더하기
+        }
+        document.write("평균온도는" + sum/degrees.length + "<br>");
+    </script>
+</body>
+</html>
